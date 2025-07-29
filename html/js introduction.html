@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Declaration & Initialization</title>
+    <link href="https://db.onlinewebfonts.com/c/1ba4767ee37aab7e8d34fc339c3538cc?family=Lato" rel="stylesheet">
+
+    <style>
+        div.slide {
+            width: 1000px;
+            margin: 100px auto;
+            box-sizing: border-box;
+            overflow: hidden;
+            box-shadow: 0 0 8px rgb(71, 69, 69);
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .JavaScript {
+            margin-bottom: 30px;
+        }
+
+        .container {
+            margin-left: 10%;
+        }
+
+        span.js {
+            background-color: yellow;
+            color: black;
+            padding-top: 20px;
+            padding-left: 20px;
+            box-sizing: content-box;
+        }
+
+        .heading {
+            box-sizing: content-box;
+            margin-bottom: 40px;
+        }
+
+        .varia {
+            background-color: #8d7f0f;
+            color: white;
+            font-weight: 700;
+            font-size: 30px;
+            padding: 10px;
+            border: 1px solid #8d7f0f;
+        }
+
+        .and {
+            background-color: white;
+            color: #8d7f0f;
+        }
+
+        .ini {
+            border: 1px solid #8d7f0f;
+            padding: 10px;
+            font-weight: 500;
+            color: #8d7f0f;
+            font-size: 30px;
+        }
+
+        .Declaration {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        span.italic {
+            font-style: italic;
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid #8d7f0f;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        mark {
+            background-color: #f8db02;
+            padding: 3px;
+        }
+
+        .table {
+            margin-left: 4%;
+            margin-bottom: 30px;
+            width: 800px;
+        }
+
+        i {
+            /* font-weight: bold; */
+            font-size: 30px;
+            color: #8d7f0f;
+        }
+
+        .example {
+            color: #8d7f0f;
+            /* font-weight: bold; */
+            font-style: italic;
+        }
+
+        div.coding {
+            background-color: #1f1f1f;
+            display: flex;
+            color: #ffffff;
+            padding: 20px;
+            /* font-size: 20px; */
+            width: 800px;
+            margin-left: 4%;
+            gap: 40px;
+            /* letter-spacing: 2px; */
+            /* font-family: "Lato light"; */
+            box-sizing: border-box;
+        }
+
+        .keyword {
+            color: #3876a5;
+        }
+
+        .variable {
+            color: #8abae3;
+        }
+
+        .value-string {
+            color: #a56466;
+        }
+
+        .value {
+            color: #b6d9788d;
+        }
+
+        div.green {
+            color: #4f9b03d3;
+        }
+
+        pre {
+            font-size: 15px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ccc489;
+            align-items: center;
+            margin-top: 10px;
+            height: 40px;
+        }
+
+        img {
+            height: 30px;
+            margin: 3px 8px 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slide">
+        <div class="JavaScript"><span class="js"> js</span></div>
+        <div class="container">
+
+            <div class="heading"><span class="varia"><span class="Declaration">Variable Declaration </span><span
+                        class="and">&</span></span><span class="ini">
+                    Initialization</span></div>
+            <div class="table">
+                <table>
+                    <p class="keywords"><span class="italic">JavaScript:</span> uses three main keywords to declare
+                        variables:</p>
+
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <th><mark>let</mark></th>
+                        <td>Modern way (block-scoped). Preferred for values that will change
+                            reassignable</td>
+                    </tr>
+                    <tr>
+                        <th><mark>const</mark></th>
+                        <td>Constant (block-scoped). Preferred for values that won’t change (but object
+                            properties can change)</td>
+                    </tr>
+                    <tr>
+                        <th><mark>var</mark></th>
+                        <td>Old way (function-scoped). Avoid using in modern JS.</td>
+                    </tr>
+                </table>
+            </div>
+            <h2>
+                <div><i> &#10132; &nbsp;</i> <span class="example">Example:</span></div>
+            </h2>
+
+            <div class="coding">
+
+                <div class="cord">
+                    <p><span class="keyword">let </span><span class="variable">age </span><span>= </span><span
+                            class="value">25;</span></p>
+                    <p><span class="keyword">const PI </span><span>= </span><span class="value">3.14;</span></p>
+                    <p><span class="keyword">var </span><span class="variable">name </span><span>= </span><span
+                            class="value-string">"Alice"</span></p>
+                </div>
+                <div class="green">
+                    <p>// Can be reassignable to New value (but 25 itself is immutable) </p>
+                    <p>// can NEVER be reassignable</p>
+                    <p>// Avoid (leaks scope)</p>
+                </div>
+                </pre>
+            </div>
+        </div>
+        <div class="footer">
+            <div><img src="./name.png" alt="" class="uki"></div>
+            <div> <img src="./uki.png" alt="" class="tech"></div>
+        </div>
+    </div>
+</body>
+
+</html>

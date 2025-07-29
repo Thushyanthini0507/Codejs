@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1,
+        h5 {
+            background-color: rgb(3, 87, 177);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .content {
+            /* margin: 20px; */
+            width: 400px;
+            margin: 60px auto;
+            padding: 30px;
+            box-shadow: 0 0 5px 0;
+            border-radius: 10px;
+        }
+
+        #fname {
+            width: 380px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        #age {
+            width: 380px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        #email {
+            width: 380px;
+            padding: 10px;
+            border-radius: 3px;
+        }
+
+        .button {
+            background-color: rgb(3, 87, 177);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+
+        <h1>Student info Form</h1>
+
+        <div class="content">
+            <p>Full Name :</p>
+            <input type="text" id="fname" required>
+            <p>Age :</p>
+            <input type="number" id="age" required>
+            <p>Email :</p>
+            <input type="email" id="e-mail">
+            <p>Phone :</p>
+            <input type="number" id="phone">
+
+            <p>
+            <fieldset id="radio">
+                <legend>Gender</legend>
+                <p><input type="radio" name="gender" id="male">Male</p>
+                <input type="radio" name="gender" id="female">Female
+            </fieldset>
+            </p>
+
+            <p>
+            <fieldset id="checkbox">
+                <legend>Subject</legend>
+                <p><input type="checkbox" name="subject" id="maths">Maths</p>
+                <p><input type="checkbox" name="subject" id="science">Science</p>
+                <input type="checkbox" name="subject" id="english">English
+            </fieldset>
+            </p>
+
+            <input type="submit" class="button" id="submit" value="Submit" onclick="displayData(event)">
+            <input type="reset" class="button" value="Clear Entries" onclick="clearfile()">
+
+        </div>
+        <div id="output"></div>
+        <h5>Weekend Task - JS Basics</h5>
+
+
+    </div>
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+        function displayData(event) {
+            event.preventDefault();
+
+            let firstName = document.getElementById(`fname`).value;
+            console.log(firstName);
+
+            let age = document.getElementById(`age`).value;
+            console.log(age);
+
+            let phone = document.getElementById(`phone`).value;
+            console.log(phone);
+
+            let gender = document.querySelector(`input[name=gender]:checked`).value;
+            if (gender) {
+                console.log("Selected gender : ", gender).value;
+            } else {
+                console.log("No Gender Selected");
+
+            }
+
+            document.getElementById(`output`).innerHTML = `
+            <h2>
+                sutent List
+            </h2>
+            <p>
+                Name :${firstName}
+            </p>
+             <p>
+                Age :${age}
+            </p>
+             <p>
+                Phone No :${phone}
+            </p>
+             <p>
+                Gender :${gender}
+            </p>
+
+            `;
+        }
+
+        function clearfile() {
+            document.getElementById("firstName").value = " ";
+            document.getElementById("age").value = " ";
+            document.getElementById("phone").value = " ";
+
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

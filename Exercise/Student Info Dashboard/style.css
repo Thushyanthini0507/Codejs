@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h5 {
+    background-color: rgb(3, 87, 177);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.content {
+    /* margin: 20px; */
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    box-shadow: 0 0 5px 0;
+    border-radius: 10px;
+}
+
+#fname {
+    width: 380px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#age {
+    width: 380px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#email {
+    width: 380px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+button {
+    background-color: rgb(3, 87, 177);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,81 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function light(show) {
+            var pic;
+            if (show == 0) {
+                pic = "pic_off.gif";
+            }
+            else{
+                pic = "pic_on.gif";
+
+            }
+            document.getElementById('off').src = pic;
+            
+        }
+    </script>
+
+
+    <img src="pic_off.gif" alt="" id="off" width="300px"><br>
+    <button type="button" onclick="turnOnLight(1)">ON</button>
+    <button type="button" onclick="turnOffLight (0)">OFF</button>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="onBtn" onclick="turnOnLight()">
+  Turn on the light
+</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="turnOffLight()">
+  Turn off the light
+</button>
+
+<script>
+function turnOnLight() {
+  document.getElementById('myImage').src = 'pic_bulbon.gif';
+  document.getElementById('onBtn').disabled = true; // disable the button
+}
+function turnOffLight() {
+  document.getElementById('myImage').src = 'pic_bulboff.gif';
+  document.getElementById('onBtn').disabled = false; // enable again if needed
+}
+</script>
+
+</body>
+</html>
+
+
+ -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="document.getElementById('myImage').src='pic_on.png'">
+  Turn on the light
+</button>
+
+<img id="myImage" src="pic_off.png" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_off.png'">
+  Turn off the light
+</button>
+
+</body>
+</html> 

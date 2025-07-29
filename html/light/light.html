@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>light</title>
+    <style>
+        div.container {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin: 100px auto;
+        }
+
+        .button {
+            margin: 100px auto;
+            padding: 10px;
+            width: 60px;
+            background-color: #0494d2;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .button:disabled {
+            background-color: rgb(66, 65, 65);
+            opacity: 0.5;
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Turn ON Button -->
+        <div> <button id="onBtn" onclick="turnOnLight()" class="button"> ON </button> </div>
+
+        <!-- Image -->
+        <div class="image"><img id="myImage" src="pic_off.gif" style="width:300px"></div>
+
+        <!-- Turn OFF Button -->
+        <div><button onclick="turnOffLight()" class="button" id="offBtn"> OFF </button></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function turnOnLight() {
+            document.getElementById("myImage").src = "pic_on.gif";      // show ON image
+            document.getElementById("onBtn").disabled = true;           // disable ON button
+            document.getElementById("offBtn").disabled = false;         // enable OFF button
+        }
+
+        function turnOffLight() {
+            document.getElementById("myImage").src = "pic_off.gif";     // show OFF image
+            document.getElementById("offBtn").disabled = true;          // disable OFF button
+            document.getElementById("onBtn").disabled = false;          // enable ON button
+        }
+    </script>
+
+</body>
+
+</html>
