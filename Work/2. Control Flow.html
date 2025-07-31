@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ternary operator
+        let age = 20;
+        let status = (age >= 18) ? "Adult" : "Minor";
+        console.log(status); // Output: Adult
+
+
+        let ageX = 10;
+        let messageX;
+        switch (true) { // Anti-pattern (avoid this!)
+            case ageX >= 18:
+                messageX = "You are an adult";
+                break;
+            default:
+                messageX = "You are a minor";
+        }
+        console.log(messageX); // "You are an adult"
+
+
+
+
+        // Using if-else if-else:
+        let temperature = 25;
+        let weather;
+        if (temperature > 30) {
+            weather = "Hot";
+        } else if (temperature > 20) {
+            weather = "Warm";
+        } else {
+            weather = "Cold";
+        }
+        console.log(weather); // Output: "Warm"
+
+
+        // Using Nested Ternary (Less Readable, Not Recommended):
+        let temp = 25;
+        let weatherNew = temp > 30 ? "Hot-x" : temp > 20 ? "Warm-x" : "Cold-x";
+        console.log(weatherNew); // Output: "Warm-x"
+
+
+    </script>
+</body>
+
+</html>

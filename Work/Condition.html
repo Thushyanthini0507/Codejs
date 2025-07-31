@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <h1>Condition</h1>
-    <ol>
-        <li>if- True</li>
-        <li>else - Fales</li>
-    </ol>
+  <h1>Condition</h1>
+  <ol>
+    <li>if- True</li>
+    <li>else - Fales</li>
+  </ol>
 
-    <!-- let marks = 20;
+  <!-- let marks = 20;
 
     if (typeof marks !== `number`) { //identified the number value <br><br>
             console.log("it's not a number value");
@@ -27,19 +27,27 @@
             console.log("Not Applicable") //it's worked without string
             } -->
 
-    <script>
-        let marks = 20;
+  <script>
+    // let marks = 20;
 
-        if (typeof marks !== `number`) {                    //identified the number value
-            console.log("it's not a number value");
-        } else if (100 >= marks && marks >= 45) {
-            console.log("you are pass");                    //if you are pass bc score true ()  // marks <= 100 and marks >= 45 ===== (marks<= 100 && marks >= 45)
-        } else if (45 >= marks && marks >= 0) {
-            console.log("you are Fail");                    // marks= 20 you are fail bc it's fales
-        } else {
-            console.log("Not Applicable")                   //it's worked without string
-        }
-        
-    </script>
+    // if (100 >= marks && marks >= 75) {
+    //   console.log("Your Result is A");
+    // } else if (100 >= marks && marks >= 75) {
+    //   console.log();
+
+
+    // }
+
+    let age = 10
+    switch (age) {
+      case age >= 18:
+        console.log("You are an adult");
+        break;
+      default:
+        console.log("You are a minor");
+    }
+
+  </script>
 </body>
+
 </html>
