@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(140, 238, 238);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.big {
+            background-color: white;
+            width: 400px;
+            align-items: center;
+            margin: 100px auto;
+            box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.501);
+            padding: 15px;
+            border: none;
+            outline: none;
+            border-radius: 15px;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+
+        #num1,
+        #num2,
+        #num3 {
+            width: 360px;
+            padding: 10px;
+            align-items: center;
+            /* text-align: center; */
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #236056;
+        }
+
+        #compare {
+            width: 380px;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0px;
+            border-radius: 10px;
+            background-color: #236056;
+            color: white;
+            border: none;
+            outline: none;
+            margin-left: 10px;
+        }
+
+        h3 {
+            background-color: #8beada;
+            border: 2px solid #236056;
+            width: 360px;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <h1>Biggest Number Finder</h1>
+        <div class="tbox">
+            <p>Number 1(a)</p>
+            <input type="number" name="num1" id="num1">
+            <p>Number 2(b)</p>
+            <input type="number" name="num2" id="num2">
+            <p>Number 3(c)</p>
+            <input type="number" name="num3" id="num3">
+            <input type="button" value="Compare" id="compare" onclick="compare()">
+        </div>
+        <!-- <div id="output"> -->
+        <h3 id="out"></h3>
+        <!-- </div> -->
+    </div>
+
+    <script>
+        function compare() {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+            const n3 = parseFloat(document.getElementById("num3").value);
+            const output = document.getElementById("out");
+
+            if (n1 === n2 && n2 === n3) {
+                output.innerText = `All numbers are equal (${n1})`;
+            } else if (n1 >= n2 && n1 >= n3 && n1 === n2) {
+                output.innerText = `a (${n1}) and b (${n2}) are biggest and equal`;
+            } else if (n1 >= n2 && n1 >= n3 && n1 === n3) {
+                output.innerText = `a (${n1}) and c (${n3}) are biggest and equal`;
+            } else if (n2 >= n1 && n2 >= n3 && n2 === n3) {
+                output.innerText = `b (${n2}) and c (${n3}) are biggest and equal`;
+            } else if (n1 > n2 && n1 > n3) {
+                output.innerText = `a (${n1}) is biggest `;
+            } else if (n2 > n1 && n2 > n3) {
+                output.innerText = `b (${n2}) is biggest`;
+            } else if (n3 > n1 && n2 < n3) {
+                output.innerText = `c (${n3}) is biggest`;
+            } else {
+                output.innerText = `Fill all box`
+            }
+        }
+    </script>
+</body>
+
+</html>
