@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Function Declaration
+        let name = "Thusi"
+        function greet(name) {
+            console.log("Hello, " + name + "!");
+        }
+        greet(name);
+        
+
+        //Expression
+        const functionName = function (parameters) { };
+        const greet = function (name) {
+            console.log("Hello, " + name + "!");
+        };
+        greet("Thusi");
+
+
+
+
+        //Global Scope
+        let city = "London"; // Global variable
+
+        function showCity() {
+            console.log(city); // ✅ Accessible here
+        }
+
+        showCity();         // Output: London
+        console.log(city);  // Output: London
+
+    </script>
+</body>
+
+</html>
