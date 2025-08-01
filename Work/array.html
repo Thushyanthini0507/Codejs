@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Creating Arrays
+        // let fruits = ["Apple", "Banana", "Mango"];
+        // let cars = ["BMW", "Audi", "Honda"];
+        // let numbers = [10, 20, 30, 40];
+
+        // //2. Using .at()
+        // console.log(fruits.at(1));       // Banana
+
+        // // 3. Adding Items
+        // let colors = ["red", "blue"];
+        // colors.push("green"); // Adds 'green' at the end
+        // console.log(colors); // ["red", "blue", "green"]
+
+        // // 4. Searching
+        // let items = ["pen", "pencil", "eraser"];
+        // console.log("indexOf('pencil'):", items.indexOf("pencil")); // 1
+        // console.log("includes('pen'):", items.includes("pen"));     // true
+
+
+        // // 5. Sorting
+        // let nums = [3, 1, 4, 2];
+        // nums.sort((a, b) => a - b); // Ascending numeric sort
+        // nums.sort((a, b) => b - a); // Descending numeric sort
+        // console.log(nums); // [1, 2, 3, 4]
+
+
+        // // 7. Reference Example
+        // let a = [1, 2, 3];
+        // let b = a;
+        // b[0] = 100;
+        // console.log(a); // [100, 2, 3]
+
+        
+        // // 8. const array modification
+
+        // const constNums = [1, 2, 3];
+        // constNums.push(4); //  Allowed
+        // console.log(constNums); // [1, 2, 3, 4]
+
+        // //const
+        // const name = [
+        //   "Saab",
+        //   "Volvo",
+        //   "BMW"
+        // ];
+
+        // console.log(name)
+
+        // //const
+        // const bus = [];
+        // cars[0] = "Saab";
+        // cars[1] = "Volvo";
+        // cars[2] = "BMW";
+
+        // console.log(bus[1])
+
+        // //length
+        // const fruit = ["Banana", "Orange", "Apple", "Mango"];
+        // console.log(fruit.length);
+
+        // //delete
+        // let arr = ['a', 'b', 'c'];
+        // delete arr[1];
+        // console.log(arr); // ['a', empty, 'c']
+
+        // //to string
+        // let trees = ['apple', 'banana', 'mango'];
+        // let result = trees.toString();
+        // console.log(result); // "apple,banana,mango"
+
+        // //at
+        // let set = ['apple', 'banana', 'mango'];
+        // console.log(set.at(1)); // "banana"
+
+
+        // //concat
+        // const myGirls = ["Cecilie", "Lone"];
+        // const myBoys = ["Emil", "Tobias", "Linus"];
+        // const myChildren = myGirls.concat(myBoys);
+        // console.log(myChildren)
+
+        // //copyWithin
+        // const organs = ["Banana", "Orange", "Apple", "Mango"];
+        // console.log(organs.copyWithin(2, 0))
+
+        // //flat
+        // const myArr = [[1, 2], [3, 4], [5, 6]];
+
+        // const newArr = myArr.flat();
+        // console.log(newArr)
+
+        // //slice
+        // const food = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        // const eat = food.slice(1);
+        // console.log(eat)
+
+        // //pop
+        // const berries = ["Banana", "Orange", "Apple", "Mango"];
+        // berries.pop();
+        // console.log(berries)
+
+        // //push
+        // const sweets = ["Banana", "Orange", "Apple", "Mango"];
+        // sweets.push("Kiwi");
+        // console.log(sweets)
+
+        // //shift
+        // const seed = ["Banana", "Orange", "Apple", "Mango"];
+        // seed.shift();
+        // console.log(seed)
+
+        // //unshift
+        // const plant = ["Banana", "Orange", "Apple", "Mango"];
+        // plant.unshift();
+        // console.log(plant)
+
+        //forEach()
+        // let fruits = ["Apple", "Banana", "Mango"];
+
+        // fruits.forEach(function (fruit, index) {
+        //   console.log(index + ": " + fruit);
+        // }); //Output =>0: Apple ,1: Banana ,2: Mango
+
+        //map()
+        // let users = [
+        //   { name: "John", age: 25 },
+        //   { name: "Sara", age: 30 },
+        //   { name: "Mike", age: 28 }
+        // ];
+
+        // let names = users.map(user => user.name);
+
+        // console.log(names);  // Output: ["John", "Sara", "Mike"]
+
+
+        //filter
+        // let users = [
+        //   { name: "Alice", age: 25 },
+        //   { name: "Bob", age: 17 },
+        //   { name: "Charlie", age: 30 }
+        // ];
+        // let adults = users.filter(user => user.age >= 18);
+        // console.log(adults);
+        // Output: [
+        //   { name: "Alice", age: 25 },
+        //   { name: "Charlie", age: 30 }
+        // ]
+
+
+        // multi demonsional
+        // let multiArray = [
+        //   [1, 2, 3],
+        //   [4, 5, 6],
+        //   [7, 8, 9]
+        // ];
+
+
+        // for (let i = 0; i < multiArray.length; i++) {
+        //   for (let j = 0; j < multiArray[i].length; j++) {
+        //     console.log(multiArray[i][j]);
+        //   }
+        // }
+
+
+        // //map
+        // let numbers = [1, 2, 3, 4];
+        // let doubled = numbers.map(function (num) {
+        //     return num * 2;
+        // });
+        // console.log(doubled);
+
+
+        //for
+        // let num = [1, 2, 3];
+        // num.forEach(function (number) {
+        //     console.log(number);
+        // })
+
+
+        // let fill = [10, 15, 20, 25, 30];
+        // let filtered = fill.filter(function (num) {
+        //     return num > 20;
+        // });
+        // console.log(filtered);
+
+    </script>
+</body>
+
+</html>
