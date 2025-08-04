@@ -90,25 +90,26 @@
             const n1 = parseFloat(document.getElementById("num1").value);
             const n2 = parseFloat(document.getElementById("num2").value);
             const n3 = parseFloat(document.getElementById("num3").value);
-            const output = document.getElementById("out");
+            let result;
 
             if (n1 === n2 && n2 === n3) {
-                output.innerText = `All numbers are equal (${n1})`;
+                result = `All numbers are equal (${n1})`;
             } else if (n1 >= n3 && n1 === n2) {
-                output.innerText = `a (${n1}) and b (${n2}) are biggest and equal`;
+                result = `a (${n1}) and b (${n2}) are biggest and equal`;
             } else if (n1 >= n2 && n1 === n3) {
-                output.innerText = `a (${n1}) and c (${n3}) are biggest and equal`;
+                result = `a (${n1}) and c (${n3}) are biggest and equal`;
             } else if (n2 >= n1 && n2 === n3) {
-                output.innerText = `b (${n2}) and c (${n3}) are biggest and equal`;
+                result = `b (${n2}) and c (${n3}) are biggest and equal`;
             } else if (n1 > n2 && n1 > n3) {
-                output.innerText = `a (${n1}) is biggest `;
+                result = `a (${n1}) is biggest `;
             } else if (n2 > n1 && n2 > n3) {
-                output.innerText = `b (${n2}) is biggest`;
+                result = `b (${n2}) is biggest`;
             } else if (n3 > n1 && n2 < n3) {
-                output.innerText = `c (${n3}) is biggest`;
+                result = `c (${n3}) is biggest`;
             } else {
-                output.innerText = `Fill all box`
+                result = `Fill all box`
             }
+            document.getElementById("out").innerHTML = result
         }
     </script>
 </body>
