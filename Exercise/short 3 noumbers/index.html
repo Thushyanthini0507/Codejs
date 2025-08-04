@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Sort Three Numbers</h1>
+        <p>Enter Number 1:</p>
+        <input type="number" name="num1" id="num1">
+
+        <p>Enter Number 2:</p>
+        <input type="number" name="num2" id="num2">
+
+        <p>Enter Number 3:</p>
+        <input type="number" name="num3" id="num3">
+
+        <p>Enter Number 3:</p>
+        <select name="" id="select">
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
+        </select>
+
+
+        <p>Sort Order:</p>
+        <input type="button" value="sord" onclick="sort()">
+        <input type="button" value="clear" onreset="Clear()">
+
+
+        <P id="display"></P>
+    </form>
+
+
+    <script>
+        function sort() {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+            const n3 = parseFloat(document.getElementById("num3").value);
+
+            let output;
+            
+                if (n1 === n2 && n2 === n3) {
+                    output = `${n1},${n2},${n3}`;
+                } else if (n1 <= n2 && n2 <= n3) {
+                    output = `${n1} ,${n2}, ${n3}`
+                } else if (n1 <= n3 && n3 <= n2) {
+                    output = `${n1} ,${n3}, ${n2}`
+                } else if (n3 <= n1 && n1 <= n2) {
+                    output = `${n3} ,${n1}, ${n2}`
+                } else if (n3 <= n2 && n2 <= n1) {
+                    output = `${n3} ,${n2}, ${n1}`
+                } else if (n2 <= n1 && n1 <= n3) {
+                    output = `${n2} ,${n1}, ${n3}`
+                } else if (n2 <= n3 && n3 <= n1) {
+                    output = `${n2} ,${n3}, ${n1}`
+                } else {
+                    output = `Fill All Box`
+                }
+            
+            document.getElementById("display").innerHTML = output
+
+        }
+
+
+    </script>
+</body>
+
+</html>
