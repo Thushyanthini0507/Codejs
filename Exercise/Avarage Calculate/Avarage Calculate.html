@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgb(241, 228, 252);
+            }
+
+            label {
+                color: black;
+                font-weight: bold;
+            }
+
+            #num1,
+            #num2,
+            #num3,
+            #num4 {
+                width: 450px;
+                margin-top: 4px;
+                border-radius: 5px;
+                border: 1px solid rgba(25, 25, 25, 0.197);
+                padding: 15px;
+                margin-bottom: 8px;
+            }
+
+            #select {
+                width: 342px;
+                border-radius: 8px;
+                border: 1px solid rgba(25, 25, 25, 0.197);
+                padding: 10px;
+                margin: 10px 0px;
+            }
+
+            .form {
+                width: 500px;
+                background-color: white;
+                border-radius: 10px;
+                margin: 30px auto;
+                padding: 20px;
+                box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.297);
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .clear {
+                background-color: rgb(247, 47, 53);
+                width: 220px;
+                padding: 12px;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                color: white;
+                font-size: 18px;
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+            .avarage{
+                background-color: rgb(12, 121, 246);
+                width: 220px;
+                padding: 12px;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                color: white;
+                font-size: 18px;
+                margin-top: 20px;
+                margin-left: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form class="form">
+            <h1>Avarage Calculate</h1>
+            <input type="number" name="num1" id="num1" placeholder="Enter Number1" required>
+            <p id="number1">Enter Number 1</p>
+
+            <input type="number" name="num2" id="num2" placeholder="Enter Number2" required>
+            <p id="number2">Enter Number 2 </p>
+
+            <input type="number" name="num3" id="num3" placeholder="Enter Number3" required>
+            <p id="number3">Enter Number 3</p>
+
+            <input type="number" name="num4" id="num4" placeholder="Enter Number4" required>
+            <p id="number4">Enter Number 4</p>
+
+
+            <div class="button">
+                <input type="button" class="avarage" value="Calculate Avarage" onclick="avarage()">
+                <input type="button" class="clear" value="clear" onclick="clear()">
+            </div>
+
+            <P id="display"></P>
+        </form>
+
+
+        <script>
+            function avarage() {
+                const n1 = parseFloat(document.getElementById("num1").value);
+                const n2 = parseFloat(document.getElementById("num2").value);
+                const n3 = parseFloat(document.getElementById("num3").value);
+                const n4 = parseFloat(document.getElementById("num4").value);
+
+                const add = (n1 + n2 + n3 + n4);
+                const result = (add /4).toFixed();
+                document.getElementById("display").innerHTML = result;
+
+
+            }
+            function clear() {
+                document.getElementById("num1").value =" ";
+                document.getElementById("num2").value =" ";
+                document.getElementById("num3").value =" ";
+                document.getElementById("num4").value =" ";
+            }
+
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -5,66 +5,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(241, 228, 252);
+        }
+
+        label {
+            color: black;
+            font-weight: bold;
+        }
+
+        #num1,
+        #num2,
+        #num3 {
+            width: 320px;
+            margin-top: 8px;
+            border-radius: 8px;
+            border: 1px solid rgba(25, 25, 25, 0.197);
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        #select {
+            width: 342px;
+            border-radius: 8px;
+            border: 1px solid rgba(25, 25, 25, 0.197);
+            padding: 10px;
+            margin: 10px 0px;
+        }
+
+        .form {
+            width: 350px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 30px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.297);
+        }
+
+        h1 {
+            text-align: center;
+            color: grey;
+        }
+        input[type="button"]{
+            background-color: blueviolet;
+            width: 150px;
+            padding: 12px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-left: 10px;
+            }
+    </style>
 </head>
 
 <body>
-    <form action="">
+    <form class="form">
         <h1>Sort Three Numbers</h1>
-        <p>Enter Number 1:</p>
+        <label>Enter Number 1:</label> <br>
         <input type="number" name="num1" id="num1">
 
-        <p>Enter Number 2:</p>
+        <label>Enter Number 2:</label> <br>
         <input type="number" name="num2" id="num2">
 
-        <p>Enter Number 3:</p>
+        <label>Enter Number 3:</label> <br>
         <input type="number" name="num3" id="num3">
 
-        <p>Enter Number 3:</p>
+        <label>Sort Order:</label> <br>
+
         <select name="" id="select">
-            <option value="Ascending">Ascending</option>
-            <option value="Descending">Descending</option>
+            <option value="asc">Ascending</option>
+            <option value="des">Descending</option>
         </select>
 
-
-        <p>Sort Order:</p>
-        <input type="button" value="sord" onclick="sort()">
-        <input type="button" value="clear" onreset="Clear()">
-
+        <div class="button">
+            <input type="button" value="sord" onclick="sort1()">
+            <input type="button" value="clear" onreset="Clear()">
+        </div>
 
         <P id="display"></P>
     </form>
 
 
     <script>
-        function sort() {
+        function sort1() {
             const n1 = parseFloat(document.getElementById("num1").value);
             const n2 = parseFloat(document.getElementById("num2").value);
             const n3 = parseFloat(document.getElementById("num3").value);
+            const order = document.getElementById("select").value;
+            //let output;
 
-            let output;
-            
-                if (n1 === n2 && n2 === n3) {
-                    output = `${n1},${n2},${n3}`;
-                } else if (n1 <= n2 && n2 <= n3) {
-                    output = `${n1} ,${n2}, ${n3}`
-                } else if (n1 <= n3 && n3 <= n2) {
-                    output = `${n1} ,${n3}, ${n2}`
-                } else if (n3 <= n1 && n1 <= n2) {
-                    output = `${n3} ,${n1}, ${n2}`
-                } else if (n3 <= n2 && n2 <= n1) {
-                    output = `${n3} ,${n2}, ${n1}`
-                } else if (n2 <= n1 && n1 <= n3) {
-                    output = `${n2} ,${n1}, ${n3}`
-                } else if (n2 <= n3 && n3 <= n1) {
-                    output = `${n2} ,${n3}, ${n1}`
-                } else {
-                    output = `Fill All Box`
-                }
-            
-            document.getElementById("display").innerHTML = output
+            //         if (n1 === n2 && n2 === n3) {
+            //             output = `${n1},${n2},${n3}`;
+            //         } else if (n1 <= n2 && n2 <= n3) {
+            //             output = `${n1} ,${n2}, ${n3}`
+            //         } else if (n1 <= n3 && n3 <= n2) {
+            //             output = `${n1} ,${n3}, ${n2}`
+            //         } else if (n3 <= n1 && n1 <= n2) {
+            //             output = `${n3} ,${n1}, ${n2}`
+            //         } else if (n3 <= n2 && n2 <= n1) {
+            //             output = `${n3} ,${n2}, ${n1}`
+            //         } else if (n2 <= n1 && n1 <= n3) {
+            //             output = `${n2} ,${n1}, ${n3}`
+            //         } else if (n2 <= n3 && n3 <= n1) {
+            //             output = `${n2} ,${n3}, ${n1}`
+            //         } else {
+            //             output = `Fill All Box`
+            //         }
 
-        }
 
+            let numbers = [n1, n2, n3];
+
+            if (order === "asc") {
+                numbers.sort((a, b) => a - b);
+            } else {
+                numbers.sort((a, b) => b - a);
+            }
+
+            document.getElementById("display").innerHTML = numbers    }
 
     </script>
 </body>
